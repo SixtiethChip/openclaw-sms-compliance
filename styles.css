@@ -61,9 +61,16 @@ h2 { margin: 0 0 1rem; font-size: 1.42rem; letter-spacing: -.02em; }
 @media (max-width: 600px) {
   .site-header, .site-footer { align-items: flex-start; padding-right: 1.1rem; padding-left: 1.1rem; }
   .site-header { flex-direction: column; gap: .8rem; }
-  main { padding: 3.2rem 1.1rem 3.6rem; }
+  main { width: 100%; min-width: 0; padding: 3.2rem 1.1rem 3.6rem; }
+  .hero, .content-section, .policy-page { width: 100%; min-width: 0; }
+  h1 { font-size: clamp(1.7rem, 7.4vw, 2.2rem); overflow-wrap: anywhere; }
+  .intro, .opt-in-instruction, .purpose-note, .disclosures { overflow-wrap: anywhere; }
+  .opt-in-card { max-width: 100%; padding: 1.1rem 1rem; }
+  .opt-in-instruction { font-size: 1.05rem; }
   .content-section { margin-top: 2.8rem; }
   .message-list { grid-template-columns: 1fr; gap: .45rem; }
+  .message-list li { min-width: 0; overflow-wrap: anywhere; }
+  .disclosures { max-width: 100%; }
   .site-footer { flex-direction: column; gap: .8rem; }
   footer nav { gap: 1rem; }
 }
